@@ -4,7 +4,6 @@ import { Stack } from "@inubekit/stack";
 import { inube } from "@inubekit/foundations";
 import { Size } from "./props";
 
-const { spacing } = inube;
 export interface IUserProps {
   userName: string;
   client: string;
@@ -15,13 +14,13 @@ const User = (props: IUserProps) => {
   const { userName, client, size = "large" } = props;
 
   return (
-    <Stack justifyContent="flex-start" alignItems="center" gap={spacing.s200}>
+    <Stack justifyContent="flex-start" alignItems="center" gap="16px">
       {size === "large" && (
         <Stack
           direction="column"
           justifyContent="center"
           alignItems="center"
-          gap={spacing.s050}
+          gap="8px"
         >
           <Text
             as="span"
