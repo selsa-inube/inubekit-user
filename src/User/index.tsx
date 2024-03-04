@@ -4,13 +4,13 @@ import { Stack } from "@inubekit/stack";
 import { Size } from "./props";
 
 export interface IUserProps {
-  userName: string;
+  username: string;
   client: string;
   size?: Size;
 }
 
 const User = (props: IUserProps) => {
-  const { userName, client, size = "large" } = props;
+  const { username, client, size = "large" } = props;
 
   return (
     <Stack justifyContent="flex-start" alignItems="center" gap="16px">
@@ -28,7 +28,7 @@ const User = (props: IUserProps) => {
             size="medium"
             textAlign={"center"}
           >
-            {userName}
+            {username}
           </Text>
           {client && (
             <Text

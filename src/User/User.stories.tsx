@@ -11,7 +11,7 @@ const story = {
 
 export const Default = (args: IUserProps) => <User {...args} />;
 Default.args = {
-  userName: "Leonardo Garzón",
+  username: "Leonardo Garzón",
   client: "Sistemas Enlínea S.A",
   size: "large",
 };
