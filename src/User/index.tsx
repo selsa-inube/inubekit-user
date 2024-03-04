@@ -1,7 +1,6 @@
 import { Avatar } from "@inubekit/avatar";
 import { Text } from "@inubekit/text";
 import { Stack } from "@inubekit/stack";
-import { inube } from "@inubekit/foundations";
 import { Size } from "./props";
 
 export interface IUserProps {
