@@ -19,7 +19,7 @@ const User = (props: IUser) => {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          gap="8px"
+          gap="4px"
         >
           <Text
             as="span"
