@@ -9,7 +9,7 @@ const story = {
   argTypes: props,
 };
 
-export const Default = (args: IUser) => <User {...args} />;
+const Default = (args: IUser) => <User {...args} />;
 Default.args = {
   username: "Leonardo Garzón",
   client: "Sistemas Enlínea S.A",
@@ -17,3 +17,4 @@ Default.args = {
 };
 
 export default story;
+export { Default };
