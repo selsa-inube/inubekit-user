@@ -1,4 +1,4 @@
-import { User, IUserProps } from ".";
+import { User, IUser } from ".";
 
 import { props, parameters } from "./props";
 
@@ -9,7 +9,7 @@ const story = {
   argTypes: props,
 };
 
-export const Default = (args: IUserProps) => <User {...args} />;
+export const Default = (args: IUser) => <User {...args} />;
 Default.args = {
   username: "Leonardo Garzón",
   client: "Sistemas Enlínea S.A",

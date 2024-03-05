@@ -3,13 +3,13 @@ import { Text } from "@inubekit/text";
 import { Stack } from "@inubekit/stack";
 import { Size } from "./props";
 
-export interface IUserProps {
+export interface IUser {
   username: string;
   client: string;
   size?: Size;
 }
 
-const User = (props: IUserProps) => {
+const User = (props: IUser) => {
   const { username, client, size = "large" } = props;
 
   return (
