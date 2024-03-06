@@ -1,3 +1,20 @@
+# v2.0.0 (Wed Mar 06 2024)
+
+#### 💥 Breaking Change
+
+- Update component to use new versions of text, avatar, stack and foundations [#3](https://github.com/selsa-inube/inubekit-user/pull/3) ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+#### 🐛 Bug Fix
+
+- Publish `<User />` package in npm [#2](https://github.com/selsa-inube/inubekit-user/pull/2) ([@Andresbl123](https://github.com/Andresbl123))
+
+#### Authors: 2
+
+- Andres ([@Andresbl123](https://github.com/Andresbl123))
+- Januar Asprilla  ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+---
+
 # v0.0.2 (Tue Feb 06 2024)
 
 #### 🐛 Bug Fix
