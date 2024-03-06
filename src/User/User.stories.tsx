@@ -1,8 +1,6 @@
-import { ThemeProvider } from "styled-components";
-import { User, IUserProps } from ".";
+import { User, IUser } from ".";
 
 import { props, parameters } from "./props";
-import { presente } from "@inubekit/foundations";
 
 const story = {
   title: "data/User",
@@ -11,24 +9,12 @@ const story = {
   argTypes: props,
 };
 
-export const Default = (args: IUserProps) => <User {...args} />;
+const Default = (args: IUser) => <User {...args} />;
 Default.args = {
-  userName: "Leonardo Garzón",
+  username: "Leonardo Garzón",
   client: "Sistemas Enlínea S.A",
   size: "large",
 };
 
-const theme = {
-  ...presente,
-};
-
-export const Themed = (args: IUserProps) => (
-  <ThemeProvider theme={theme}>
-    <User {...args} />
-  </ThemeProvider>
-);
-Themed.args = {
-  ...Default.args,
-};
-
 export default story;
+export { Default };
