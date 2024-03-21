@@ -1,12 +1,12 @@
 import { Avatar } from "@inubekit/avatar";
 import { Text } from "@inubekit/text";
 import { Stack } from "@inubekit/stack";
-import { Size } from "./props";
+import { IUserSize } from "./props";
 
 interface IUser {
   username: string;
   client: string;
-  size?: Size;
+  size?: IUserSize;
 }
 
 const User = (props: IUser) => {

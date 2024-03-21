@@ -1,5 +1,5 @@
-export const sizes = ["small", "large"] as const;
-export type Size = (typeof sizes)[number];
+const sizes = ["small", "large"] as const;
+type IUserSize = (typeof sizes)[number];
 
 const parameters = {
   docs: {
@@ -37,3 +37,4 @@ const props = {
 };
 
 export { props, parameters };
+export type { IUserSize };
