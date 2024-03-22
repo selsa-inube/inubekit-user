@@ -1,3 +1,24 @@
+# v2.1.0 (Fri Mar 22 2024)
+
+#### 🚀 Enhancement
+
+- Adjust and export interfaces [#5](https://github.com/selsa-inube/inubekit-user/pull/5) ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+#### 📝 Documentation
+
+- Release new version 2.0.0 [#4](https://github.com/selsa-inube/inubekit-user/pull/4) ([@cmarin001](https://github.com/cmarin001))
+
+#### 🔩 Dependency Updates
+
+- Update inubekit/user to storybook v8 [#6](https://github.com/selsa-inube/inubekit-user/pull/6) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 2
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+- Januar Asprilla  ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+---
+
 # v2.0.0 (Wed Mar 06 2024)
 
 #### 💥 Breaking Change
