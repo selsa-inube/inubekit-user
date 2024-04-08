@@ -1,3 +1,15 @@
+# v2.1.2 (Mon Apr 08 2024)
+
+#### 🐛 Bug Fix
+
+- Fix: Adjustment in order to update stack-component dependency [#9](https://github.com/selsa-inube/inubekit-user/pull/9) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.1.1 (Thu Apr 04 2024)
 
 #### 🐛 Bug Fix
