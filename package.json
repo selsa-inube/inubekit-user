@@ -40,9 +40,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@inubekit/avatar": "^2.3.0",
     "@inubekit/foundations": "^5.1.0",
-    "@inubekit/stack": "^2.3.0",
+    "@inubekit/avatar": "^2.3.0",
+    "@inubekit/stack": "^2.4.0",
     "@inubekit/text": "^2.6.0"
   },
   "peerDependencies": {
