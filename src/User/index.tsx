@@ -27,6 +27,7 @@ const User = (props: IUser) => {
             type="label"
             size="medium"
             textAlign={"center"}
+            weight="bold"
           >
             {username}
           </Text>
