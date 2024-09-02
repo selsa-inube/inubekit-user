@@ -42,7 +42,7 @@
   "dependencies": {
     "@inubekit/avatar": "^2.9.1",
     "@inubekit/foundations": "^5.11.2",
-    "@inubekit/stack": "^3.7.0",
+    "@inubekit/stack": "^3.8.0",
     "@inubekit/text": "^2.14.0"
   },
   "peerDependencies": {
