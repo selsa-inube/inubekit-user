@@ -69,7 +69,6 @@ const User = (props: IUser) => {
             businessUnit={client}
             avatar={true}
             sections={menuSections}
-            spacing="wide"
           />
         </StyledMenuContainer>
       )}
