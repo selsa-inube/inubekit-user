@@ -24,8 +24,7 @@ const sections: IUserSection[] = [
       {
         title: "Cambiar cliente",
         iconBefore: <MdManageAccounts />,
-        path: "#",
-        onClick: () => alert("Client changed"),
+        path: "/account",
       },
     ],
   },
