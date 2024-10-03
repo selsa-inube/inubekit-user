@@ -1,5 +1,14 @@
+import { IMenuAction, IMenuLink } from "@inubekit/menu";
+
 const sizes = ["small", "large"] as const;
 type IUserSize = (typeof sizes)[number];
+
+interface IUserSection {
+  title?: string;
+  links?: IMenuLink[];
+  actions?: IMenuAction[];
+  divider?: boolean;
+}
 
 const parameters = {
   docs: {
@@ -37,4 +46,4 @@ const props = {
 };
 
 export { props, parameters };
-export type { IUserSize };
+export type { IUserSize, IUserSection };

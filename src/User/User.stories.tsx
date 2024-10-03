@@ -1,10 +1,8 @@
-import { ISection } from "@inubekit/menu";
-
 import { MdManageAccounts, MdLogout } from "react-icons/md";
 import { StoryFn } from "@storybook/react";
 import { BrowserRouter } from "react-router-dom";
 import { IUser, User } from ".";
-import { parameters, props } from "./props";
+import { IUserSection, parameters, props } from "./props";
 
 const story = {
   title: "data/User",
@@ -20,7 +18,7 @@ const story = {
   ],
 };
 
-const sections: ISection[] = [
+const sections: IUserSection[] = [
   {
     links: [
       {
@@ -32,19 +30,19 @@ const sections: ISection[] = [
     ],
   },
   {
-    links: [
+    actions: [
       {
         title: "Cerrar sesión",
+        description: "Log out from your account",
         iconBefore: <MdLogout />,
-        path: "#",
-        onClick: () => alert("Logged out"),
+        onClick: () => console.log("Logged out"),
       },
     ],
     divider: true,
   },
 ];
 
-const Default = (args: IUser) => <User {...args} />;
+const Default: StoryFn<IUser> = (args: IUser) => <User {...args} />;
 Default.args = {
   username: "Leonardo Garzón",
   client: "Sistemas Enlínea S.A",
