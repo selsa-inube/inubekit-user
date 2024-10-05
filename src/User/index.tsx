@@ -3,7 +3,7 @@ import { Text } from "@inubekit/text";
 import { Stack } from "@inubekit/stack";
 import { IMenuSection, IUserSize } from "./props";
 import { useState } from "react";
-import { StyledMenuContainer } from "./styles";
+import { StyledMenuContainer, StyledUser } from "./styles";
 import { Menu } from "@inubekit/menu";
 import { MenuUser } from "@inubekit/menu";
 import { MenuSection } from "@inubekit/menu";
@@ -24,7 +24,7 @@ const User = (props: IUser) => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <>
+    <StyledUser>
       <Stack justifyContent="flex-start" alignItems="center" gap="16px">
         {size === "large" && (
           <Stack
@@ -98,7 +98,7 @@ const User = (props: IUser) => {
           </Menu>
         </StyledMenuContainer>
       )}
-    </>
+    </StyledUser>
   );
 };
 

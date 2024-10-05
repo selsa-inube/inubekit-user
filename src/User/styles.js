@@ -6,4 +6,11 @@ const StyledMenuContainer = styled.div`
   z-index: 1;
 `;
 
-export { StyledMenuContainer };
+const StyledUser = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+`;
+
+export { StyledMenuContainer, StyledUser };
