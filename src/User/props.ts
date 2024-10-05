@@ -1,13 +1,31 @@
-import { IMenuAction, IMenuLink } from "@inubekit/menu";
-
 const sizes = ["small", "large"] as const;
 type IUserSize = (typeof sizes)[number];
 
-interface IUserSection {
+interface IMenuSection {
+  id: string;
   title?: string;
-  links?: IMenuLink[];
-  actions?: IMenuAction[];
   divider?: boolean;
+  links?: ILink[];
+  actions?: IAction[];
+}
+
+interface ILink {
+  id: string;
+  title: string;
+  path: string;
+  iconBefore?: JSX.Element;
+  iconAfter?: JSX.Element;
+  disabled?: boolean;
+}
+
+interface IAction {
+  id: string;
+  title: string;
+  description?: string;
+  iconBefore?: JSX.Element;
+  iconAfter?: JSX.Element;
+  disabled?: boolean;
+  action: () => void;
 }
 
 const parameters = {
@@ -43,7 +61,14 @@ const props = {
       defaultValue: { summary: "large" },
     },
   },
+  menu: {
+    description:
+      "An array of sections that contain either links or actions for the user menu. Each section can have a title, links, actions, and a divider.",
+    table: {
+      type: { summary: "IMenuSection" },
+    },
+  },
 };
 
 export { props, parameters };
-export type { IUserSize, IUserSection };
+export type { IUserSize, IMenuSection, ILink, IAction };

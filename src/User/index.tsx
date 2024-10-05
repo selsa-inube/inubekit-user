@@ -1,7 +1,7 @@
 import { Avatar } from "@inubekit/avatar";
 import { Text } from "@inubekit/text";
 import { Stack } from "@inubekit/stack";
-import { IUserSection, IUserSize } from "./props";
+import { IMenuSection, IUserSize } from "./props";
 import { useState } from "react";
 import { StyledMenuContainer } from "./styles";
 import { Menu } from "@inubekit/menu";
@@ -14,11 +14,11 @@ interface IUser {
   username: string;
   client: string;
   size?: IUserSize;
-  menuSections: IUserSection[];
+  menu: IMenuSection[];
 }
 
 const User = (props: IUser) => {
-  const { username, client, size = "large", menuSections } = props;
+  const { username, client, size = "large", menu } = props;
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
@@ -64,16 +64,16 @@ const User = (props: IUser) => {
         <StyledMenuContainer>
           <Menu>
             <MenuUser userName={username} businessUnit={client} avatar={true} />
-            {menuSections.map((section, index) => (
+            {menu.map((section) => (
               <MenuSection
-                key={index}
+                key={section.id}
                 title={section.title}
                 divider={section.divider}
               >
                 {section.links &&
-                  section.links.map((link, linkIndex) => (
+                  section.links.map((link) => (
                     <MenuLink
-                      key={linkIndex}
+                      key={link.id}
                       title={link.title}
                       path={link.path}
                       iconBefore={link.iconBefore}
@@ -82,15 +82,15 @@ const User = (props: IUser) => {
                     />
                   ))}
                 {section.actions &&
-                  section.actions.map((action, actionIndex) => (
+                  section.actions.map((action) => (
                     <MenuAction
-                      key={actionIndex}
+                      key={action.id}
                       title={action.title}
                       description={action.description}
                       iconBefore={action.iconBefore}
                       iconAfter={action.iconAfter}
                       disabled={action.disabled}
-                      onClick={action.onClick}
+                      action={action.action}
                     />
                   ))}
               </MenuSection>

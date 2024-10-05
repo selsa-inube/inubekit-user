@@ -2,7 +2,7 @@ import { MdManageAccounts, MdLogout } from "react-icons/md";
 import { StoryFn } from "@storybook/react";
 import { BrowserRouter } from "react-router-dom";
 import { IUser, User } from ".";
-import { IUserSection, parameters, props } from "./props";
+import { IMenuSection, parameters, props } from "./props";
 
 const story = {
   title: "data/User",
@@ -18,10 +18,12 @@ const story = {
   ],
 };
 
-const sections: IUserSection[] = [
+const sections: IMenuSection[] = [
   {
+    id: "section-1",
     links: [
       {
+        id: "link-1",
         title: "Cambiar cliente",
         iconBefore: <MdManageAccounts />,
         path: "/account",
@@ -29,12 +31,14 @@ const sections: IUserSection[] = [
     ],
   },
   {
+    id: "section-2",
     actions: [
       {
+        id: "action-1",
         title: "Cerrar sesión",
         description: "Log out from your account",
         iconBefore: <MdLogout />,
-        onClick: () => console.log("Logged out"),
+        action: () => console.log("Logged out"),
       },
     ],
     divider: true,
@@ -46,7 +50,7 @@ Default.args = {
   username: "Leonardo Garzón",
   client: "Sistemas Enlínea S.A",
   size: "large",
-  menuSections: sections,
+  menu: sections,
 };
 
 export default story;
