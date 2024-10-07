@@ -1,14 +1,16 @@
+import { useState, useRef, useEffect } from "react";
 import { Avatar } from "@inubekit/avatar";
 import { Text } from "@inubekit/text";
 import { Stack } from "@inubekit/stack";
+import {
+  Menu,
+  MenuUser,
+  MenuSection,
+  MenuLink,
+  MenuAction,
+} from "@inubekit/menu";
 import { IMenuSection, IUserSize } from "./props";
-import { useState } from "react";
-import { StyledMenuContainer, StyledUser } from "./styles";
-import { Menu } from "@inubekit/menu";
-import { MenuUser } from "@inubekit/menu";
-import { MenuSection } from "@inubekit/menu";
-import { MenuLink } from "@inubekit/menu";
-import { MenuAction } from "@inubekit/menu";
+import { StyledAvatarRef, StyledMenuContainer, StyledUser } from "./styles";
 
 interface IUser {
   username: string;
@@ -20,8 +22,35 @@ interface IUser {
 const User = (props: IUser) => {
   const { username, client, size = "large", menu } = props;
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const avatarRef = useRef<HTMLDivElement>(null);
 
-  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const toggleMenu = () => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target as Node) &&
+      avatarRef.current &&
+      !avatarRef.current.contains(event.target as Node)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside); // Clean up the listener
+    };
+  }, [isOpen]);
 
   return (
     <StyledUser>
@@ -38,7 +67,7 @@ const User = (props: IUser) => {
               appearance="dark"
               type="label"
               size="medium"
-              textAlign={"center"}
+              textAlign="center"
               weight="bold"
             >
               {username}
@@ -49,21 +78,22 @@ const User = (props: IUser) => {
                 appearance="gray"
                 type="body"
                 size="small"
-                textAlign={"center"}
+                textAlign="center"
               >
                 {client}
               </Text>
             )}
           </Stack>
         )}
-
-        <Avatar onClick={toggleMenu} />
+        <StyledAvatarRef ref={avatarRef}>
+          <Avatar onClick={toggleMenu} />
+        </StyledAvatarRef>
       </Stack>
 
       {isOpen && (
-        <StyledMenuContainer>
+        <StyledMenuContainer ref={menuRef}>
           <Menu>
-            <MenuUser userName={username} businessUnit={client} avatar={true} />
+            <MenuUser userName={username} businessUnit={client} avatar />
             {menu.map((section) => (
               <MenuSection
                 key={section.id}
@@ -103,5 +133,4 @@ const User = (props: IUser) => {
 };
 
 export { User };
-
 export type { IUser };

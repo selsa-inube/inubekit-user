@@ -11,6 +11,10 @@ const StyledUser = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
+  & > div > div {
+    user-select: none;
+  }
 `;
 
-export { StyledMenuContainer, StyledUser };
+const StyledAvatarRef = styled.div``;
+export { StyledAvatarRef, StyledMenuContainer, StyledUser };
