@@ -1,3 +1,15 @@
+# v3.0.0 (Tue Oct 08 2024)
+
+#### 💥 Breaking Change
+
+- Add clickable Avatar with floating menu in User component [#39](https://github.com/selsa-inube/inubekit-user/pull/39) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.29.0 (Fri Sep 27 2024)
 
 #### 🚀 Enhancement
