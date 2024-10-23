@@ -7,14 +7,17 @@ const StyledMenuContainer = styled.div`
 `;
 
 const StyledUser = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
   & > div > div {
     user-select: none;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
-const StyledAvatarRef = styled.div``;
-export { StyledAvatarRef, StyledMenuContainer, StyledUser };
+export { StyledMenuContainer, StyledUser };
