@@ -10,7 +10,7 @@ import {
   MenuAction,
 } from "@inubekit/menu";
 import { IMenuSection, IUserSize } from "./props";
-import { StyledAvatarRef, StyledMenuContainer, StyledUser } from "./styles";
+import { StyledMenuContainer, StyledUser } from "./styles";
 
 interface IUser {
   username: string;
@@ -53,7 +53,7 @@ const User = (props: IUser) => {
   }, [isOpen]);
 
   return (
-    <StyledUser>
+    <StyledUser onClick={toggleMenu} ref={avatarRef}>
       <Stack justifyContent="flex-start" alignItems="center" gap="16px">
         {size === "large" && (
           <Stack
@@ -85,9 +85,7 @@ const User = (props: IUser) => {
             )}
           </Stack>
         )}
-        <StyledAvatarRef ref={avatarRef}>
-          <Avatar onClick={toggleMenu} />
-        </StyledAvatarRef>
+        <Avatar />
       </Stack>
 
       {isOpen && (
