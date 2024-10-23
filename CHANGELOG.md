@@ -1,3 +1,15 @@
+# v3.1.1 (Wed Oct 23 2024)
+
+#### 🐛 Bug Fix
+
+- fix: menu opens wherever User is clicked [#41](https://github.com/selsa-inube/inubekit-user/pull/41) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v3.1.0 (Thu Oct 10 2024)
 
 #### 🚀 Enhancement
