@@ -12,7 +12,10 @@ const story = {
   decorators: [
     (Story: StoryFn) => (
       <BrowserRouter>
-        <Story />
+        <div style={{ display: "grid", gridTemplateColumns: "1fr auto" }}>
+          <div></div>
+          <Story />
+        </div>
       </BrowserRouter>
     ),
   ],

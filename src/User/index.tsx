@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useMediaQuery } from "@inubekit/hooks";
 import { Avatar } from "@inubekit/avatar";
 import { Text } from "@inubekit/text";
 import { Stack } from "@inubekit/stack";
@@ -9,6 +10,7 @@ import {
   MenuLink,
   MenuAction,
 } from "@inubekit/menu";
+
 import { IMenuSection, IUserSize } from "./props";
 import { StyledMenuContainer, StyledUser } from "./styles";
 
@@ -24,6 +26,8 @@ const User = (props: IUser) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const avatarRef = useRef<HTMLDivElement>(null);
+
+  const mobile = useMediaQuery("(max-width: 344px)");
 
   const toggleMenu = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
@@ -90,7 +94,7 @@ const User = (props: IUser) => {
 
       {isOpen && (
         <StyledMenuContainer ref={menuRef}>
-          <Menu>
+          <Menu width={mobile ? "90vw" : "312px"} ref={menuRef}>
             <MenuUser userName={username} businessUnit={client} avatar />
             {menu.map((section) => (
               <MenuSection
