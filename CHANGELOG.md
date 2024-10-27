@@ -1,3 +1,15 @@
+# v3.1.2 (Sun Oct 27 2024)
+
+#### 🐛 Bug Fix
+
+- feat: update avatar, foundations and menu dependencies [#42](https://github.com/selsa-inube/inubekit-user/pull/42) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v3.1.1 (Wed Oct 23 2024)
 
 #### 🐛 Bug Fix
