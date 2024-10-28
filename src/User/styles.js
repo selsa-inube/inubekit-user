@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 const StyledMenuContainer = styled.div`
   position: absolute;
-  top: 100%;
-  right: 0;
+  top: ${({ $top }) => $top};
+  right: ${({ $right }) => $right};
   z-index: 1;
-  margin-top: 8px;
 `;
 
 const StyledUser = styled.div`
