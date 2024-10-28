@@ -16,7 +16,7 @@ import { StyledMenuContainer, StyledUser } from "./styles";
 
 interface IUser {
   username: string;
-  client: string;
+  client?: string;
   size?: IUserSize;
   padding?: string;
   margin?: string;
