@@ -18,11 +18,24 @@ interface IUser {
   username: string;
   client: string;
   size?: IUserSize;
+  padding?: string;
+  margin?: string;
   menu: IMenuSection[];
+  menuTopPosition?: string;
+  menuRightPosition?: string;
 }
 
 const User = (props: IUser) => {
-  const { username, client, size = "large", menu } = props;
+  const {
+    username,
+    client,
+    size = "large",
+    padding,
+    margin,
+    menu,
+    menuTopPosition = "100%",
+    menuRightPosition = "16px",
+  } = props;
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const avatarRef = useRef<HTMLDivElement>(null);
@@ -58,7 +71,13 @@ const User = (props: IUser) => {
 
   return (
     <StyledUser onClick={toggleMenu} ref={avatarRef}>
-      <Stack justifyContent="flex-start" alignItems="center" gap="16px">
+      <Stack
+        justifyContent="flex-start"
+        alignItems="center"
+        gap="16px"
+        padding={padding}
+        margin={margin}
+      >
         {size === "large" && (
           <Stack
             direction="column"
@@ -93,7 +112,11 @@ const User = (props: IUser) => {
       </Stack>
 
       {isOpen && (
-        <StyledMenuContainer ref={menuRef}>
+        <StyledMenuContainer
+          ref={menuRef}
+          $top={menuTopPosition}
+          $right={menuRightPosition}
+        >
           <Menu width={mobile ? "90vw" : "312px"} ref={menuRef}>
             <MenuUser userName={username} businessUnit={client} avatar />
             {menu.map((section) => (
