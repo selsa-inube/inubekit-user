@@ -1,3 +1,15 @@
+# v3.2.0 (Mon Oct 28 2024)
+
+#### 🚀 Enhancement
+
+- feat: add padding, margin, menuTopPosition, menuRightPosition props [#44](https://github.com/selsa-inube/inubekit-user/pull/44) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v3.1.3 (Mon Oct 28 2024)
 
 #### 🐛 Bug Fix
