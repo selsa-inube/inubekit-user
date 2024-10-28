@@ -1,3 +1,15 @@
+# v3.2.1 (Mon Oct 28 2024)
+
+#### 🐛 Bug Fix
+
+- fix: change interface to make client prop optional [#45](https://github.com/selsa-inube/inubekit-user/pull/45) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v3.2.0 (Mon Oct 28 2024)
 
 #### 🚀 Enhancement
