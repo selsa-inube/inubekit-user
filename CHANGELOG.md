@@ -1,3 +1,15 @@
+# v3.1.3 (Mon Oct 28 2024)
+
+#### 🐛 Bug Fix
+
+- feat: position absolute for menu with user being relative [#43](https://github.com/selsa-inube/inubekit-user/pull/43) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v3.1.2 (Sun Oct 27 2024)
 
 #### 🐛 Bug Fix
